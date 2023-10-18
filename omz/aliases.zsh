@@ -6,7 +6,7 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zs="source ~/.zshrc"
+alias zs="nano ~/.zshrc"
 alias vpnlogs="journalctl -u NetworkManager.service -fx"
 
 alias fbs="cd ~/Desktop/repos/whitelabels/fbs"
