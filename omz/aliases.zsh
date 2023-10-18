@@ -14,3 +14,6 @@ alias ops="cd ~/Desktop/repos/whitelabels/ops"
 alias wl="cd ~/Desktop/repos/whitelabels/fbs"
 alias gom="cd ~/Desktop/repos/new_gomule/gomule"
 alias hw1="cd ~/Desktop/repos/Hegewald1"
+
+# Random - Might delete or change later
+alias urp="unicorn_rails -p 3000"
