@@ -1,0 +1,10 @@
+Theme:
+ZSH_THEME="af-magic"
+
+Plugins:
+plugins=(git rails ruby bundler)
+source $ZSH/oh-my-zsh.sh
+
+Exports:
+export DATABASE_USERNAME=postgres
+export SSH_AUTH_SOCK=~'secret'
