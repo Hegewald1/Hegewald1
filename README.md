@@ -1,4 +1,5 @@
 ## Contents
 
-### oh-my-zsh
-- Contains aliases used in development
+### omz (oh-my-zsh)
+- Aliases
+- Settings
