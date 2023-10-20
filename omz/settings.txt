@@ -1,10 +1,14 @@
-Theme:
+# asdf path
+. "$HOME/.asdf/asdf.sh"
+
+# Theme:
 ZSH_THEME="af-magic"
 
-Plugins:
-plugins=(git rails ruby bundler)
+# Plugins:
+plugins=(git rails ruby bundler chucknorris history zsh-autosuggestions zsh-syntax-highlighting brew)
 source $ZSH/oh-my-zsh.sh
 
-Exports:
+# Exports:
 export DATABASE_USERNAME=postgres
 export SSH_AUTH_SOCK=~'secret'
+export ZSH="$HOME/.oh-my-zsh"
