@@ -51,4 +51,5 @@ reset_db() {
         echo "Error: This command can only be run from within an fbs directory"
     fi
 }
+alias rubofix='g diff --name-only --diff-filter=d --cached | grep -v 'db/schema.rb' | xargs bundle exec rubocop -a'
 
