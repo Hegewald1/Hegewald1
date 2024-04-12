@@ -42,4 +42,13 @@ function ghpr() {
   GH_FORCE_TTY=100% gh pr list | tail -n +5 | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window $window_location --bind 'ctrl-j:preview-down,ctrl-k:preview-up' | a$
 }
 alias brave='open -a "Brave Browser.app" --args --profile-directory=Default'
-alias reset_test_db='if [[ $(pwd) == *"fbs"* ]]; then RAILS_ENV=test && be rake db:drop && be rake db:create && SAFETY_ASSURED=1 RAILS_ENV=test be rake db:migrate; else echo "Error: This command can only be run from within fbs directory (preferrably shared_models)"; fi'
+reset_db() {
+    if [[ $(pwd) == *"fbs"* ]]; then
+        bundle exec rake db:drop RAILS_ENV="${1:-test}" && \
+        bundle exec rake db:create RAILS_ENV="${1:-test}" && \
+        SAFETY_ASSURED=1 bundle exec rake db:migrate RAILS_ENV="${1:-test}"
+    else
+        echo "Error: This command can only be run from within an fbs directory"
+    fi
+}
+
